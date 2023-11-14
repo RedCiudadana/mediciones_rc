@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# publish_mode: editorial_workflow
+media_folder: "assets/images/cms" # Media files will be stored in the repo under src/assets/images/posts
+public_folder: "/assets/images/cms" # The src attribute for uploaded media will begin with assets/images/posts
+
+collections:
+  - name: "mediciones" # Used in routes, e.g., /admin/collections/podcast
+    label: "Mediciones" # Used in the UI
+    folder: "src/mediciones" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Título de la Medición" }
+      - { name: "description", label: "Descripción" }
+      - { name: "video", label: "Video" }
+      - { name: "metodologia", label: "Metodologia" }
+      - { name: "indicadores", label: "Indicadores", widget: "markdown" }
+      - { name: "encuesta", label: "Recolección (Encuesta)" }
+      - { name: "gruposfocales", label: "Recolección (Grupos Focales)" }
+      - { name: "usersimulado", label: "Recolección (Usuario Simulado)" }
