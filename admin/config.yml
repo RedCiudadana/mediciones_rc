@@ -18,7 +18,7 @@ collections:
       - { name: "title", label: "Título de la Medición" }
       - { name: "description", label: "Descripción" }
       - { name: "video", label: "Video" }
-      - { name: "metodologia", label: "Metodologia" }
+      - { name: "metodologia", label: "Metodologia", widget: "markdown" }
       - { name: "indicadores", label: "Indicadores", widget: "markdown" }
       - { name: "encuesta", label: "Recolección (Encuesta)" }
       - { name: "gruposfocales", label: "Recolección (Grupos Focales)" }
