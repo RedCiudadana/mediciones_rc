@@ -1,23 +1,5 @@
-
-const proyectos = [
-    "ImpactaLatam",
-    "Servicios Públicos",
-    "LabMunicipal",
-    "LabElectoral",
-    "Auditoria Social",
-    "Monitor Legislativo",
-    "Alianza por la Democracia",
-    "Partidos Públicos",
-    "Semaforo Electoral",
-    "CandiDatos",
-    "Nuestra Elección",
-    "Guatemala Leaks",
-    "Mochila Electoral",
-    "MancoVerapaz",
-    "Índice de Datos Abiertos Justicia 2021",
-    "Índice de Datos Abiertos 2021"
-];
-
+const rmj = require('render-markdown-js');
+const moment = require("moment");
 
 module.exports = function (eleventyConfig) {
 
@@ -25,5 +7,29 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src');
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addPassthroughCopy('admin');
+
+    eleventyConfig.addNunjucksFilter("rmj", function (content) {
+        return rmj(content);
+    });
+
+    eleventyConfig.addNunjucksFilter("limit", function (array, limit) {
+        return array.slice(0, limit);
+    });
+
+    eleventyConfig.addNunjucksFilter("limitPart", function (array, limit1, limit2) {
+        return array.slice(limit1, limit2);
+    });
+
+    eleventyConfig.addNunjucksFilter("limitSinPrimero", function (array, limit) {
+        return array.slice(1, limit);
+    });
+
+    eleventyConfig.addFilter("dateFormat", function (date, format) {
+        return moment(date).format(format);
+    });
+
+    eleventyConfig.addFilter('log', value => {
+        console.log(value)
+    });
 }
 

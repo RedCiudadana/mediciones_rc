@@ -16,9 +16,8 @@ permalink: "index.html"
                     <div class="row justify-content-center">
                         <div class="col-lg-7">
                             <div class="breadcrumb-text text-center" style="padding: 0 2rem">
-								<div class="titulo_new">
-									<img src="/assets/newElements/er-40.png">
-									<h2 >Mediciones RC</h2>
+								<div class="titulo_estrategia">
+									<h2 class="size_title">Mediciones RC</h2>
 								</div>
                                 <h3 class="text-white" style="font-size:20px">
 								Conoce más sobre los proyectos, monitoreo y evaluación, voluntariado y financiamiento de <b>Red Ciudadana</b> </h3>
@@ -44,75 +43,15 @@ permalink: "index.html"
 
 										<div class="row my-15">
 
+											{% for medicion in collections.mediciones %}
 											<div class="col-lg-3 my-4">
-												<a href="https://redciudadana.org/estrategia_24-28/index.html" target="_blank"><div class="cuadro_index">
+												<a href="{{medicion.url}}" ><div class="cuadro_index">
 													<img src="/assets/newElements/ICONOS/er-31.png">
-													<h4>Estrategia 2022-2025</h4>
+													<h4>{{medicion.data.title}}</h4>
 												</div></a>
 											</div>
+											{% endfor %}
 
-											<div class="col-lg-3 my-4">
-												<a href="/adminis/index.html"><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-32.png">
-													<h4>Administración</h4>
-												</div></a>
-											</div>
-
-											<div class="col-lg-3 my-4">
-												<a href="/financiamiento/index.html"><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-33.png">
-													<h4>Financiamiento</h4>
-												</div></a>
-											</div>
-
-											<div class="col-lg-3 my-4">
-												<a href="/reporte_anual/index.html"><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-34.png">
-													<h4>Reporte Anual</h4>
-												</div></a>
-											</div>
-
-											<div class="col-lg-3 my-4">
-												<a href="/programas/index.html"><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-38.png">
-													<h4>Programa</h4>
-												</div></a>
-											</div>
-
-											<div class="col-lg-3 my-4">
-												<a href="/proyectos/index.html"><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-37.png">
-													<h4>Proyectos</h4>
-												</div></a>
-											</div>
-
-											<div class="col-lg-3 my-4">
-												<a href="/monitoreo/index.html"><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-36.png">
-													<h4>Monitoreo</h4>
-												</div></a>
-											</div>
-
-											<div class="col-lg-3 my-4">
-												<a href=""><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-35.png">
-													<h4>Analíticas</h4>
-												</div></a>
-											</div>
-
-											<div class="col-lg-3 my-4">
-												<a href="/voluntariado/index.html"><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-37.png">
-													<h4>Voluntariado</h4>
-												</div></a>
-											</div>
-
-											<div class="col-lg-3 my-4">
-												<a href="/indicadores/index.html"><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-38.png">
-													<h4>Indicadores</h4>
-												</div></a>
-											</div>
 											
 										</div>
 
