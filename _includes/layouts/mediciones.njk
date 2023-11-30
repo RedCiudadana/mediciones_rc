@@ -7,12 +7,13 @@
 {% block content %}
 
 			<!-- breadcrumb-area-start -->
-            <div class="breadcrumb-area pt-150 pb-155" style="background-image:url(/assets/newElements/SLIDER/er-39.png)">
+            <div class="breadcrumb-area pt-150 pb-155" style="background-image:url({{slider}})">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-7">
                             <div class="breadcrumb-text text-center" style="padding: 0 2rem">
 								<div class="titulo_estrategia">
+									<img src="{{icono2}}">
 									<h2 class="size_title_v2">{{title}}</h2>
 								</div>
                             </div>
@@ -21,64 +22,71 @@
                 </div>
             </div>
             <!-- breadcrumb-area-end -->
-<!--begin::Content-->
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						
-						<!--begin::Entry-->
-						<div class="container d-flex flex-column-fluid">
-							<!--begin::Container-->
-							<div class="container-fluid">
+			<!--begin::Content-->
+			<div class="content p-0 d-flex flex-column flex-column-fluid" id="kt_content">
+				
+				<!--begin::Entry-->
+				<div class="d-flex flex-column-fluid">
+					<!--begin::Container-->
+					<div class="p-0 container-fluid">
 
-								<!--begin::Card-->
-								<div class="card card-custom gutter-b">
-									<div class="card-body text-center">
-                                        <div class="row align-items-center">
-                                            <div class="col-lg-6"><p>{{description | safe}}</p></div>
-                                            <div class="col-lg-6">{{video | safe}}</div>
-                                        </div>
+						<!--begin::Card-->
+						<div class="card card-custom gutter-b mb-0">
+							<div class="container card-body pt-20 pb-20">
+								<div class="row align-items-center">
+									<div class="col-lg-6">
+										<h2 class="h2-custom">¿Qué es el {{title}}?</h2>
+										<div class="linea-blue"></div>
+										<p>{{description | safe}}</p>
 									</div>
+									<div class="col-lg-6">{{video | safe}}</div>
 								</div>
-								<!--end::Card-->
-                                <!--begin::Card-->
-								<div class="card card-custom gutter-b">
-									<div class="card-body text-center">
-                                        <h2>Metodología</h2>
-										{{metodologia | rmj | safe}}
-									</div>
-								</div>
-								<!--end::Card-->
-                                <!--begin::Card-->
-								<div class="card card-custom gutter-b">
-									<div class="card-body text-center">
-                                        <h2>Indicadores</h2>
-										{{indicadores | safe}}
-									</div>
-								</div>
-								<!--end::Card-->
-
-                                <!--begin::Card-->
-								<div class="card card-custom gutter-b">
-									<div class="card-body text-center">
-                                        <h2>Recolección</h2>
-										<div class="row">
-                                            <div class="col-lg-4">
-                                                <a class="btn btn-light-primary font-weight-bold ml-2" href="/form_enc/{{title | slug}}/index.html">Encuesta</a>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <a class="btn btn-light-primary font-weight-bold ml-2" href="/form_gru/{{title | slug}}/index.html">Grupos Focales</a>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <a class="btn btn-light-primary font-weight-bold ml-2" href="/form_usu/{{title | slug}}/index.html">Usuario Simulado</a>
-                                            </div>
-                                        </div>
-									</div>
-								</div>
-								<!--end::Card-->
-								
 							</div>
-							<!--end::Container-->
 						</div>
-						<!--end::Entry-->
+						<!--end::Card-->
+						<!--begin::Card-->
+						<div class="card card-custom gutter-b mb-0" style="background-color:#e4e9ec!important">
+							<div class="container card-body text-center pt-20 pb-20">
+								<div class="d-flex justify-content-center align-items-center mb-5">
+									<img src="/assets/redciudadana.png" style="width:50px;height:auto;margin-right:5px">
+									<h2 class="h2-custom mb-0">Metodología</h2>
+								</div>
+								
+								{{metodologia | rmj | safe}}
+
+								<div class="row mt-20">
+									<div class="col-lg-4">
+										<a href="/form_enc/{{title | slug}}/index.html"><div class="card-form">
+											<img src="/assets/mediciones/ICONOS/MEDICION-30.png">
+											<p>Acceso a la información pública</p>
+										</div></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="/form_gru/{{title | slug}}/index.html"><div class="card-form">
+											<img src="">
+											<p>Grupos Focales con Sociedad Civil</p>
+										</div></a>
+									</div>
+									<div class="col-lg-4">
+										<a href="/form_usu/{{title | slug}}/index.html"><div class="card-form">
+											<img src="">
+											<p>Usuario Simulado</p>
+										</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--end::Card-->
+						<!--begin::Card-->
+						<div class="card card-custom gutter-b mb-0">
+							<div class="container card-body text-center pt-20 pb-20">
+								<h2 class="h2-custom">Indicadores</h2>
+								<div class="linea-blue-centered"></div>
+								{{indicadores | safe}}
+							</div>
+						</div>
+						<!--end::Card-->
+								
 					</div>
 					<!--end::Content-->
 					
