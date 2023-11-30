@@ -16,7 +16,7 @@ collections:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
       - { name: "title", label: "Título de la Medición" }
-      - { name: "icono", label: "Ícono" }
+      - { name: "icono", label: "Ícono", widget: "image" }
       - { name: "description", label: "Descripción" }
       - { name: "video", label: "Video" }
       - { name: "metodologia", label: "Metodologia", widget: "markdown" }
