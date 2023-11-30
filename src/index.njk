@@ -11,7 +11,7 @@ permalink: "index.html"
 {% block content %}
 <!--begin::Body-->
 			<!-- breadcrumb-area-start -->
-            <div class="breadcrumb-area pt-150 pb-155" style="background-image:url(/assets/newElements/SLIDER/er-30.png)">
+            <div class="breadcrumb-area pt-150 pb-155" style="background-image:url(/assets/mediciones/SLIDERS/MEDICION-17.png)">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-7">
@@ -46,7 +46,7 @@ permalink: "index.html"
 											{% for medicion in collections.mediciones %}
 											<div class="col-lg-3 my-4">
 												<a href="{{medicion.url}}" ><div class="cuadro_index">
-													<img src="/assets/newElements/ICONOS/er-31.png">
+													<img src="{{medicion.data.icono}}">
 													<h4>{{medicion.data.title}}</h4>
 												</div></a>
 											</div>
