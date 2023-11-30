@@ -16,6 +16,7 @@ collections:
       preview: false # Disable the editor preview and use instead 'preview links'
     fields: # The fields for each document, usually in front matter
       - { name: "title", label: "Título de la Medición" }
+      - { name: "slider", label: "Slider de Índice", widget: "image" }
       - { name: "icono", label: "Ícono de Preview", widget: "image" }
       - { name: "icono2", label: "Ícono de Página", widget: "image" }
       - { name: "description", label: "Descripción" }
