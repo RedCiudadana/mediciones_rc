@@ -1,6 +1,8 @@
 ---
 title: Índice de Justicia Abierta (IJA)
+slider: /assets/images/cms/medicion-04.png
 icono: /assets/images/cms/medicion-29.png
+icono2: /assets/images/cms/medicion-24.png
 description: El Índice de Justicia Abierta es una herramienta diseñada para
   evaluar el nivel de apertura y transparencia en el sistema judicial.
 video: <iframe width="560" height="315"
