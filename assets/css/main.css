@@ -1111,11 +1111,12 @@ padding-left: 55px; }
   align-items: center;
   padding: 25px 20px;
   height: 100%;
-  transition: 0.5s;
+  transition: all ease 1s;
 }
 
 .card-form:hover{
-  transform:translate(2px,-2px)
+  transform:translate(2px,-2px);
+  background-color: #7fb5e8;
 }
 
 .card-form img{
@@ -1127,6 +1128,8 @@ padding-left: 55px; }
   color: #2b2a2a;
   font-weight: 600;
   font-size: 17px;
+  line-height: 19px;
+  text-align: start;
 }
 
 .linea-blue{
